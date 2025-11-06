@@ -1,4 +1,4 @@
-package com.nnpg.glazed.utils.glazed;
+package com.wazify.Trojan.utils.Trojan;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
