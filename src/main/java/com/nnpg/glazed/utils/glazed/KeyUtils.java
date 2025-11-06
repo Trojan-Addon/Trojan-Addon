@@ -1,4 +1,4 @@
-package com.nnpg.glazed.utils.glazed;
+package com.wazify.Trojan.utils.Trojan;
 
 import org.apache.commons.lang3.StringUtils;
 import org.lwjgl.glfw.GLFW;
