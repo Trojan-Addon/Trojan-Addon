@@ -1,4 +1,4 @@
-package com.nnpg.glazed.utils;
+package com.wazify.Trojan.utils;
 
 import java.util.Random;
 
