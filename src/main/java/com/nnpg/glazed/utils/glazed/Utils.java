@@ -1,4 +1,4 @@
-package com.nnpg.glazed.utils.glazed;
+package com.wazify.Trojan.utils.Trojan;
 
 import net.minecraft.util.math.Vec3d;
 import org.joml.Vector3d;
