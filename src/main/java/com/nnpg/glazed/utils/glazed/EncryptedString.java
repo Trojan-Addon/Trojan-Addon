@@ -1,4 +1,4 @@
-package com.nnpg.glazed.utils.glazed;
+package com.wazify.Trojan.utils.Trojan;
 
 import org.jetbrains.annotations.NotNull;
 
