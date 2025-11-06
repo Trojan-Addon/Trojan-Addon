@@ -1,4 +1,4 @@
-package com.nnpg.glazed.utils.glazed;
+package com.wazify.Trojan.utils.Trojan;
 
 public class StringUtils {
     public static String convertUnicodeToAscii(String text) {
