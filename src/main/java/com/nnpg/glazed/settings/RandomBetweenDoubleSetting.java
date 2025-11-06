@@ -1,6 +1,6 @@
-package com.nnpg.glazed.settings;
+package com.wazify.Trojan.settings;
 
-import com.nnpg.glazed.utils.RandomBetweenDouble;
+import com.wazify.Trojan.utils.RandomBetweenDouble;
 import meteordevelopment.meteorclient.settings.*;
 import net.minecraft.nbt.NbtCompound;
 
