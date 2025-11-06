@@ -3,7 +3,7 @@
  * Copyright (c) Meteor Development.
  */
 
-package com.nnpg.glazed;
+package com.wazify.Trojan;
 
 import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
@@ -36,12 +36,11 @@ public class MyScreen extends WindowScreen {
 
         MeteorExecutor.execute(() -> {
             try {
-                String versionString = Http.get("https://glazedclient.com/versions/normal1.21.4.txt").sendString();
+                String versionString = Http.get("https://Trojanclient.com/versions/normal1.21.4.txt").sendString();
                 if (versionString != null && !versionString.isEmpty()) {
                     int latestVersion = Integer.parseInt(versionString.trim());
 
-
-                    if (latestVersion > GlazedAddon.MyScreenVERSION) {
+                    if (latestVersion > TrojanAddon.MyScreenVERSION) {
                         net.minecraft.client.MinecraftClient.getInstance().execute(() -> {
                             net.minecraft.client.MinecraftClient.getInstance().setScreen(new MyScreen(meteordevelopment.meteorclient.gui.GuiThemes.get()));
                         });
@@ -64,17 +63,17 @@ public class MyScreen extends WindowScreen {
     private void fetchLatestVersion() {
         MeteorExecutor.execute(() -> {
             try {
-                String versionString = Http.get("https://glazedclient.com/versions/normal1.21.4.txt").sendString();
+                String versionString = Http.get("https://Trojanclient.com/versions/normal1.21.4.txt").sendString();
                 if (versionString != null && !versionString.isEmpty()) {
                     latestVersion = Integer.parseInt(versionString.trim());
                 } else {
-                    latestVersion = GlazedAddon.MyScreenVERSION;
+                    latestVersion = TrojanAddon.MyScreenVERSION;
                 }
                 isVersionFetched = true;
 
                 reload();
             } catch (Exception e) {
-                latestVersion = GlazedAddon.MyScreenVERSION;
+                latestVersion = TrojanAddon.MyScreenVERSION;
                 isVersionFetched = true;
                 reload();
             }
@@ -82,11 +81,11 @@ public class MyScreen extends WindowScreen {
     }
 
     private void buildUI() {
-        addWrappedMessage("Welcome to Glazed Client version checker. Here you can see your current version and check for updates.");
+        addWrappedMessage("Welcome to Trojan Client version checker. Here you can see your current version and check for updates.");
 
         add(theme.horizontalSeparator()).padVertical(theme.scale(4)).expandX();
 
-        addMessage(String.format("Installed Version: %d", GlazedAddon.MyScreenVERSION));
+        addMessage(String.format("Installed Version: %d", TrojanAddon.MyScreenVERSION));
 
         if (isVersionFetched) {
             addMessage(String.format("Latest Version: %d", latestVersion));
@@ -97,10 +96,10 @@ public class MyScreen extends WindowScreen {
         // Always add separator and update message area to maintain consistent height
         add(theme.horizontalSeparator()).padVertical(theme.scale(8)).expandX();
 
-        if (isVersionFetched && latestVersion > GlazedAddon.MyScreenVERSION) {
-            addWrappedMessage("You're using an outdated version of the Glazed addon. Please update to the latest version. Newer versions may include important bug fixes, improvements, and additional features.");
-        } else if (isVersionFetched && latestVersion == GlazedAddon.MyScreenVERSION) {
-            addWrappedMessage("You're using the latest version of the Glazed addon. No update needed.");
+        if (isVersionFetched && latestVersion > TrojanAddon.MyScreenVERSION) {
+            addWrappedMessage("You're using an outdated version of the Trojan addon. Please update to the latest version. Newer versions may include important bug fixes, improvements, and additional features.");
+        } else if (isVersionFetched && latestVersion == TrojanAddon.MyScreenVERSION) {
+            addWrappedMessage("You're using the latest version of the Trojan addon. No update needed.");
         } else {
             addWrappedMessage("Checking for updates...");
         }
@@ -113,13 +112,13 @@ public class MyScreen extends WindowScreen {
         // GitHub button
         WButton githubButton = buttonsContainer.add(theme.button("GitHub")).expandX().widget();
         githubButton.action = () -> {
-            Util.getOperatingSystem().open("https://github.com/realnnpg/glazed");
+            Util.getOperatingSystem().open("https://github.com/realwazify/Trojan");
         };
 
         // Website button
         WButton websiteButton = buttonsContainer.add(theme.button("Website")).expandX().widget();
         websiteButton.action = () -> {
-            Util.getOperatingSystem().open("https://glazedclient.com");
+            Util.getOperatingSystem().open("https://Trojanclient.com");
         };
     }
 
