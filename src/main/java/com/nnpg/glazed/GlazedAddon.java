@@ -1,8 +1,8 @@
-package com.nnpg.glazed;
+package com.wazify.Trojan;
 
-import com.nnpg.glazed.modules.esp.*;
-import com.nnpg.glazed.modules.main.*;
-import com.nnpg.glazed.modules.pvp.*;
+import com.wazify.Trojan.modules.esp.*;
+import com.wazify.Trojan.modules.main.*;
+import com.wazify.Trojan.modules.pvp.*;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.Category;
@@ -16,23 +16,16 @@ import net.minecraft.item.ItemStack;
 import meteordevelopment.meteorclient.systems.modules.Category;
 
 
+public class TrojanAddon extends MeteorAddon {
 
-
-public class GlazedAddon extends MeteorAddon {
-
-public static final Category CATEGORY = new Category("Glazed", new ItemStack(Items.CAKE));
-public static final Category esp = new Category("Glazed ESP ", new ItemStack(Items.VINE));
-public static final Category pvp = new Category("Glazed PVP", new ItemStack(Items.DIAMOND_SWORD));
-
-
-
+    public static final Category CATEGORY = new Category("Trojan", new ItemStack(Items.CAKE));
+    public static final Category esp = new Category("Trojan ESP ", new ItemStack(Items.VINE));
+    public static final Category pvp = new Category("Trojan PVP", new ItemStack(Items.DIAMOND_SWORD));
 
     public static int MyScreenVERSION = 14;
 
     @Override
     public void onInitialize() {
-
-
 
         Modules.get().add(new SpawnerProtect()); //done
         Modules.get().add(new AntiTrap()); //done
@@ -122,7 +115,6 @@ public static final Category pvp = new Category("Glazed PVP", new ItemStack(Item
         Modules.get().add(new BedrockVoidESP());
         Modules.get().add(new UIHelper());
 
-
         MeteorClient.EVENT_BUS.subscribe(this);
     }
 
@@ -142,14 +134,11 @@ public static final Category pvp = new Category("Glazed PVP", new ItemStack(Item
         Modules.registerCategory(esp);
         Modules.registerCategory(pvp);
 
-
         //mc.setScreen(new MyScreen(GuiThemes.get()));
     }
 
     @Override
     public String getPackage() {
-        return "com.nnpg.glazed";
+        return "com.wazify.Trojan";
     }
-
-
 }
